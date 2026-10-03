@@ -1,0 +1,323 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+    background-color:rgb(154, 0, 74);
+    padding: 12px; /* ? - Antes era padding: 12px 4%; pq? */
+
+    /* ? - Isso daqui, de alguma forma, fixa o tudo do header ao descer pela pagina */
+    position: sticky;
+    top:0;
+    z-index: 1;
+
+
+
+    #menu{
+
+        display: flex;
+        justify-content: space-between; /* Espaço entre elementos*/
+        align-items: center;
+
+        ul{
+            display: none; /* ! - Por o valor = none */
+            flex-direction: column;
+            list-style: none;
+
+            gap:0.5rem;
+            width:100%; /* Muito importante, não esquecer disso para o menu */
+            position: absolute;
+            top:40px;
+            background-color: rgb(154, 0, 74);
+            left:0;
+            padding: 1rem;
+
+            &.show{
+                display: flex;
+            }
+
+            li{
+                text-align: center;
+                a{
+                    text-decoration: none;
+                    color:white;
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        .btn_mobile{
+            background: transparent;
+            border: 1.2px solid white;
+            padding: 5px;
+            color:white;
+            font-weight: bolder;
+        }
+    
+    }
+}
+
+#hero{
+    display: flex;
+    flex-direction: column;
+    gap:12px;
+    align-items: center;
+
+    padding-top:30px; 
+ 
+
+
+    .hero_title{
+        color: rgb(3, 0, 11);
+        text-align: center;
+        font-size: clamp(1rem,10vw,4.3rem);
+        text-transform: uppercase;
+
+
+        span{
+            color:rgb(149, 2, 2);
+            border-top: 1px solid  rgb(3, 0, 11);
+            font-size: clamp(1rem,6vw,4.3rem);
+
+
+        }
+    }
+
+    .contato{
+
+        button{
+            width:clamp(60px,10vw,400px);
+            
+            background: transparent;
+            padding: 10px;
+            border: 2px solid white ;
+            border-radius: 50px;
+
+            svg{
+                max-width: 70em;
+            }
+
+
+
+            #logo_whatsapp{
+                color: white;;
+            }
+            #logo_instagram{
+                color:rgb(255, 255, 255);
+            }
+
+            &:hover{
+                background-color: rgba(153, 105, 33, 0.646);
+            }
+
+        }
+
+
+    }
+
+
+
+
+
+
+
+}
+
+
+
+#destaque{
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap:50px;
+    .trending_cards{
+        background-color: aliceblue;
+        width:clamp(20px,85%,390px);
+        padding:20px 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+        
+
+        .trending_card{
+            
+
+            img{
+                width: clamp(10px,70vw,350px);
+            }
+            
+            .trending_rate{
+
+            }
+        }
+    }
+}
+
+
+/* ? - Será que apago isso ou refaço? */
+body{
+    text-align: center;
+    height: 400vh;
+}
+
+
+
+
+
+
+
+body{
+    background-color: rgba(178, 122, 37, 0.646);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*TODO - Sobre o media query, seria interessante alterar valor do width com base quando o menu aparece, não precisa ser 769px sempre*/
+
+/*
+@media (min-width:768px){
+
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+
+html { scroll-behavior: smooth; }
+
+section { scroll-margin-top: 200px; } 
+
+nav{
+    padding:20px;
+    background-color: rgba(65, 8, 8, 0.943); 
+    justify-content: center; 
+    align-items: center;  
+
+
+    position: sticky;
+    top: 0px;
+    z-index: 9999;
+
+    display: flex;
+}
+
+nav ul{
+    list-style: none;
+    gap: 50px;
+
+
+
+    display: flex;
+}
+
+
+nav ul li a{ 
+    text-decoration: none;
+    color: aliceblue;
+}
+
+#contato{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("img/pexels-cake-1850011.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1540px;
+    height: 750px;    
+
+    
+}
+
+.inicio{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    padding:16rem 0 0 0;
+}
+
+
+.titulo{
+    font-size: 2rem;
+    color: white;
+}
+
+
+
+
+.contato{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#contato button a svg{
+    width:16; 
+    height:16;
+}
+
+
+body{
+    background-color: #f9e06f4f;
+}
+
+
+button a svg{
+    width: 30px;
+    height: 30px;
+
+}
+
+
+.sobre{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.sobre h2{
+    justify-content: center;
+    text-align: center;
+    margin:  5rem 0 5rem 0;
+}
+
+.sobre p{
+    max-width: 20rem;
+    margin:0 0 5rem 0;
+}
+
+
+}
+*/

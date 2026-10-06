@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- ? - Pensando em usar links externos para usar fonts que contenham o svg menu para estilizar e recebe o comando do JS -->
 
     <title>Confeitaria</title>
@@ -19,8 +18,13 @@
                 <li><a href="#produtos">Produtos</a></li>
                 <li><a href="#sobre">Sobre</a></li>
             </ul>
-            <button class="btn_mobile">
-                Menu
+            <button class="btn_mobile" >
+                <svg class = "btn_list" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"  viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+                </svg>
+                <svg class="btn_close"  xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"  viewBox="0 0 16 16">
+                    <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
+                </svg>
             </button>
         </nav>
     </header>
@@ -28,9 +32,9 @@
         <section id="hero">
             <div class="container">
                 <div>
-                    <h1 class="hero_title"><!-- TODO - Template -->
-                        Confeitaria
-                        <br><span>A confeitaria</span> <!-- TODO - A base do seu site -->
+                    <h1 class="hero_title">
+                        Template
+                        <br><span> A base do seu site </span> 
                     </h1>
                 </div>
                 <div class="contato">
@@ -49,7 +53,7 @@
             </div>
  
             </section>
-            <section id="sobre">
+<!--             <section id="sobre">
                 <div class="container">
                     <h2>Sobre</h2>
                     <p> 
@@ -58,14 +62,62 @@
                         Peça com 3 dias de antecedência.
                     </p>
                 </div>
-            </section>
+            </section> -->
 
 
 
-        <section class="produtos "id ="produtos">
+        <section class="produtos" id ="produtos">
         <div class="container">
             <h2>Destaques</h2>
             <div class="list">
+                <article class="cards">
+
+                        <img 
+                        src="img/trending-cake.jpg" 
+                        alt=""
+                        >
+                        <div class="rate">
+                            <h3> Olha, um bolo!</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit. Adipisci veritatis et nobis 
+                                dolorum doloremque temporibus itaque qui maiores 
+                                pariatur. Nisi!
+                            </p>
+
+                    </div>
+                </article>
+                <article class="cards">
+
+                        <img 
+                        src="img/trending-cake.jpg" 
+                        alt=""
+                        >
+                        <div class="rate">
+                            <h3> Olha, um bolo!</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit. Adipisci veritatis et nobis 
+                                dolorum doloremque temporibus itaque qui maiores 
+                                pariatur. Nisi!
+                            </p>
+
+                    </div>
+                </article>
+                <article class="cards">
+
+                        <img 
+                        src="img/trending-cake.jpg" 
+                        alt=""
+                        >
+                        <div class="rate">
+                            <h3> Olha, um bolo!</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur 
+                                adipisicing elit. Adipisci veritatis et nobis 
+                                dolorum doloremque temporibus itaque qui maiores 
+                                pariatur. Nisi!
+                            </p>
+                        </div>
+
+                </article>
                 <article class="cards">
 
                         <img 
@@ -119,9 +171,23 @@
             
 
         </section>
+        <section id = "encomendas">
+            <div class = "container">
+                <h2>Como encomendar</h2>
+                <ol class="passos"><!-- Lista enumerada -->
+                    <li><strong>Chame no WhatsApp: </strong>Conte o que você quer, a data e quantas pessoas vão comer.</li>
+                    <li><strong>Receba o orçamento: </strong>Respondemos com valor e prazo no mesmo dia.</li>
+                    <li><strong>Pague e retire: </strong>Confirme com 50% de sinal e busque na data combinada.</li>
+                </ol>
+            </div>
+        </section>
+
+
 
         <footer><!-- Color meu nome com link pro meu portifolio -->
-
+            <a href="https://davibeber.github.io/Portfolio/?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAcGRvZgJzcnRjBmFwcF9pZA85MzY2MTk3NDMzOTI0NTkAAacvjIEYdF_jfSD1fpuN3mZIB_1t2EB0QDfnflfhNdZIuRVg5wKuQDyWnOIYyQ_aem_LAP3R45RQuBJ18M5Ubrfpg">
+                © 2026 - Davi Béber Ribeiro <!-- ! - Talvez seja necessário mudar posteriormente -->
+            </a>
         </footer>
         <script src="script.js"></script>
     </main>

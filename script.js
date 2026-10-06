@@ -2,10 +2,15 @@
 // ! - Não é esse nome de class, VERIFIQUE
 const btnMobile = document.querySelector(".btn_mobile");
 const navLinks = document.getElementById("nav_links");
-
+const list = document.querySelector(".btn_list");
+const close = document.querySelector(".btn_close")
 
 btnMobile.addEventListener("click", () =>{
     navLinks.classList.toggle("show");
+
+    list.classList.toggle("ativo");
+    close.classList.toggle("ativo");
+
 
 });
 

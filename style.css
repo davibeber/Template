@@ -14,7 +14,7 @@ section { padding-block: 4rem; }
 
 
 header{
-    background: linear-gradient( 250deg, #100C0B 0,30%, #9b1d36);
+    background-color: bisque;
     border-bottom: 1px solid black;
     padding: 12px; /* ? - Antes era padding: 12px 4%; pq? */
 
@@ -28,7 +28,7 @@ header{
     #menu{
 
         display: flex;
-        justify-content: space-between; /* Espaço entre elementos*/
+        justify-content: space-between; /* Espaço entre elementos */
         align-items: center;
 
         ul{
@@ -39,10 +39,11 @@ header{
             gap:0.5rem;
             width:100%; /* Muito importante, não esquecer disso para o menu */
             position: absolute;
-            top:40px;
-            background: linear-gradient( 250deg, #100C0B 0,30%, #9b1d36);
+            top:52px;
+            background-color: bisque;
             left:0;
             padding: 1rem;
+            border-bottom: 1px solid black;
 
             &.show{
                 display: flex;
@@ -52,7 +53,7 @@ header{
                 text-align: center;
                 a{
                     text-decoration: none;
-                    color:white;
+                    color:black;
                     font-size: 1rem;
                     font-weight: 500;
                 }
@@ -61,10 +62,26 @@ header{
 
         .btn_mobile{
             background: transparent;
-            border: 1.2px solid white;
-            padding: 5px;
-            color:white;
+            border: 1.2px solid black;
+            padding: 3px 4px;
+            color:black;
             font-weight: bolder;
+        }
+
+        .btn_list{
+            &.ativo{
+                display: none;
+            }
+        }
+
+        .btn_close{
+            display: none;
+
+
+            &.ativo{
+                display: flex;
+            }
+
         }
     
     }
@@ -82,7 +99,7 @@ header{
     justify-content: center; 
     gap: 0.6rem;
     border-radius: 25px;
-    border: 1px solid white;
+    border: 1px solid black;
     text-decoration: none;
     width:clamp(8rem, 50vw,10rem);
     padding:0.5rem;
@@ -92,8 +109,8 @@ header{
 }
 
 
-.btn_wpp{ background-color:transparent; color:white;}
-.btn_insta{background-color: transparent; color:white;}
+.btn_wpp{ background-color:transparent; color:black;}
+.btn_insta{background-color: transparent; color:black;}
 
 #hero{ padding-top: 7rem; padding-bottom: 3rem;
 
@@ -102,16 +119,19 @@ header{
         div{
             font-weight: 800; 
             letter-spacing: -0.02em; /* ? - O Que é isso? */
-            color: rgb(232, 192, 98);
+            color: black;
 
             h1{
                 font-size:clamp(25px,10vw,100rem); /* ! - Concertar isso quando criar media query para desktop*/
+                color: rgb(250, 95, 121);
+                
             }
 
-
-
             span{
-                margin: 1rem 0 1.75rem; 
+                display: block; /* ! - Não sei o que fiz mas deu o resultado que eu queria, revisar dps */
+                margin: 1rem 0 1.75rem;
+                color:black; 
+                border-top:1px solid black;
 
             }
         }
@@ -137,7 +157,7 @@ header{
 
 }
 
-
+/* 
 #sobre{
     background-color: rgb(245, 245, 245);
 
@@ -150,25 +170,27 @@ header{
             padding-bottom:30px;
         }
     }
-}
+} */
 
 
 #produtos{
-    background-color: rgb(210, 255, 187);
+    background-color: rgb(187, 255, 255);
 
+    .container{
     .list{
         display: grid;
         gap: 1rem; 
         margin-top: 2rem;
-
+        margin-right: auto;
 
         .cards{
             background: #ffffff;
             border-radius: 1.25rem;
-            padding: 1.5rem;
-            display: grid;           
+            padding: 1rem 1rem;
+            display: flex;
+            flex-direction: column;           
             grid-template-columns: auto 1fr; 
-
+            
             gap: 0.25rem 1rem;
             align-items: center; 
 
@@ -185,7 +207,7 @@ header{
                     }
                     
                     p{
-                        font-size: 0.95rem;     
+                        font-size: 0.95rem;
                 }
         
 
@@ -194,18 +216,81 @@ header{
     }
 }
 
+}
+
+#encomendas{
+    background-color: #ffffff;
+
+
+    .container{
+        padding:0 0px;
+        font-size: 0.6rem;
+
+
+        h2{
+            padding:0 0 30px 0;
+
+        }
+
+        ol{
+            display: flex;
+            flex-direction: column;
+
+            li{
+                strong{
+                    color: #100C0B; /* ! - Só pra saber o que é de fato */
+                    font-weight: 600;
+                
+                }
+            }
+        }
+    }
+
+}
+
+
 
 /* ? - Será que apago isso ou refaço? */
 body{
-    background: linear-gradient( 250deg, #100C0B 0,30%, #9b1d36);
-
+    background-color: bisque;
     text-align: center;
     height: 400vh;
 }
 
 
+footer{
+    a{
+        list-style: none;
+        text-decoration: none;
+        color:black;
+        font-size: small;
+
+        &:hover{
+            color:blue;
+        }
+    }
+}
 
 
+@media(min-width:530px){
+    #produtos{
+
+        .list{
+
+            .cards{
+                background: #ffffff;
+                border-radius: 1.25rem;
+                padding: 1.5rem;
+                display: grid;
+                grid-template-columns: auto 1fr; 
+
+                gap: 0.25rem 1rem;
+                align-items: center; 
+
+            }
+        }
+    }
+}
 
 
 
@@ -261,12 +346,45 @@ section { padding-block: 6rem; }
 
         }
     }
+
+
+
+#encomendas{
+    background-color: #ffffff;
+
+
+    .container{
+        padding:0 20px;
+        font-size: 1.2rem;
+
+        h2{
+            padding:0 0 30px 0;
+
+        }
+
+        ol{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 200px;
+            li{
+
+
+                strong{
+                    color: #100C0B; 
+                    font-weight: 600;
+                
+                }
+            }
+        }
+    }
+
 }
 
 
 
 
 
+}
 
 
 

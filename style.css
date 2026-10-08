@@ -16,13 +16,12 @@ section { padding-block: 4rem; }
 header{
     background-color: bisque;
     border-bottom: 1px solid black;
-    padding: 12px; /* ? - Antes era padding: 12px 4%; pq? */
+    padding: 22px; /* ? - Antes era padding: 12px 4%; pq? */
 
     /* ? - Isso daqui, de alguma forma, fixa o tudo do header ao descer pela pagina */
     position: sticky;
     top:0;
     z-index: 1;
-
 
 
     #menu{
@@ -63,9 +62,10 @@ header{
         .btn_mobile{
             background: transparent;
             border: 1.2px solid black;
-            padding: 3px 4px;
+            padding: 6px 8px;
             color:black;
             font-weight: bolder;
+            margin-left: auto;
         }
 
         .btn_list{
@@ -254,7 +254,6 @@ header{
 body{
     background-color: bisque;
     text-align: center;
-    height: 400vh;
 }
 
 

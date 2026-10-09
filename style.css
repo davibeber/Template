@@ -104,7 +104,7 @@ header{
     justify-content: center; 
     gap: 0.6rem;
     border-radius: 25px;
-    border: 1px solid black;
+    border: 1px solid rgb(243, 239, 239);
     text-decoration: none;
     width:clamp(8rem, 50vw,10rem);
     padding:0.5rem;
@@ -114,17 +114,25 @@ header{
 }
 
 
-.btn_wpp{ background-color:transparent; color:black;}
-.btn_insta{background-color: transparent; color:black;}
+.btn_wpp{ background-color:transparent; color:rgb(244, 241, 241);}
+.btn_insta{background-color: transparent; color:rgb(245, 244, 244);}
 
 #hero{ padding-top: 7rem; padding-bottom: 3rem;
 
-    .container{ display: grid; gap: 2.5rem; 
+    background: linear-gradient(rgba(10, 10, 10, 0.557), rgba(23, 22, 22, 0.55)), url(img/bolo-chocolate.jpg) ;
+    background-size: cover;
+    background-position: 70% center;
+    height: 80vh;
+    
+    
 
+
+
+    .container{ display: grid; gap: 2.5rem; 
         div{
             font-weight: 800; 
             letter-spacing: -0.02em; /* ? - O Que é isso? */
-            color: black;
+            color: rgb(251, 246, 246);
 
             h1{
                 font-size:clamp(25px,10vw,100rem); /* ! - Concertar isso quando criar media query para desktop*/
@@ -135,8 +143,8 @@ header{
             span{
                 display: block; /* ! - Não sei o que fiz mas deu o resultado que eu queria, revisar dps */
                 margin: 1rem 0 1.75rem;
-                color:black; 
-                border-top:1px solid black;
+                color:rgb(249, 245, 245); 
+                border-top:1px solid rgb(252, 252, 252);
 
             }
         }
@@ -176,6 +184,40 @@ header{
         }
     }
 } */
+
+
+#encomendas{
+    background-color: #ffffff;
+
+
+    .container{
+        font-size: 0.6rem;
+
+        h2{
+            padding:0 0 30px 0;
+            font-size: 2rem;
+        }
+
+        ol{
+            display: flex;
+            flex-direction: column;
+            font-size: 1.25rem;
+            padding-left: 15px;
+            text-align: left;
+
+
+            li{
+                padding-bottom: 20px;
+                strong{
+                    color: #100C0B; /* ! - Só pra saber o que é de fato */
+                    font-weight: 600;
+                
+                }
+            }
+        }
+    }
+
+}
 
 
 #produtos{
@@ -223,35 +265,6 @@ header{
 
 }
 
-#encomendas{
-    background-color: #ffffff;
-
-
-    .container{
-        padding:0 0px;
-        font-size: 0.6rem;
-
-
-        h2{
-            padding:0 0 30px 0;
-
-        }
-
-        ol{
-            display: flex;
-            flex-direction: column;
-
-            li{
-                strong{
-                    color: #100C0B; /* ! - Só pra saber o que é de fato */
-                    font-weight: 600;
-                
-                }
-            }
-        }
-    }
-
-}
 
 
 
@@ -263,6 +276,10 @@ body{
 
 
 footer{
+    margin-top: 50px;
+    padding: 20px;
+    
+
     a{
         list-style: none;
         text-decoration: none;
